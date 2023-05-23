@@ -61,7 +61,7 @@ export default function Products(props){
             </div>
             
             {/* BLUR BOX */}
-            <button type = "button" onClick={()=>{setBtnshow("hidden")}} className={"z-[1] absolute top-0 right-0 left-0 bottom-0 black_col opacity-70 " + btnshow}></button>
+            <button type = "button" onClick={()=>{setBtnshow("hidden")}} className={"z-[1] absolute top-0 right-0 left-0 bottom-0 black_col opacity-90 " + btnshow}></button>
 
             {/* SPECIFICATIONS BUTTON */}
             <button type = "button" onClick={()=>{setSpecshow("hidden") ; setBtnshow("hidden")}} className={"z-[1] flex items-center justify-center absolute top-0 right-0 left-0 bottom-0 " + specshow}>

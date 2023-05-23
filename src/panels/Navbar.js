@@ -20,7 +20,7 @@ export default function Navbar(props){
     const [catshow, setCatshow] = useState("top-[-50%]");
 
     function OpenCat(){
-        setBtnshow("block opacity-70");
+        setBtnshow("block opacity-90");
         setCatshow("block top-0");
     }
 

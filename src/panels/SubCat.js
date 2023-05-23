@@ -17,7 +17,7 @@ export default function SubCat(props){
     const [subcatshow, setSubcatshow] = useState("right-[-50%]");
 
     function OpenCat(){
-        setBtnshow("block opacity-70");
+        setBtnshow("block opacity-90");
         setSubcatshow("block right-0");
     }
 
