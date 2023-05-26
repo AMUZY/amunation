@@ -1,5 +1,13 @@
 @use "theme";
 
+@use "sass:math";
+
+@function torem ($pixels) {
+    $result : (math.div($pixels, 16)*1rem);
+    @return $result;
+}
+
+
 $style : "Cabinet Grotesk";
 $c_align : center;
 $s_bold : 700;
@@ -11,47 +19,47 @@ $norm : 400;
 
 .title {
     font-family: $style;
-    font-size: 24px;
+    font-size: torem(24);
     font-weight: $s_bold;
     text-align: $c_align;
-    line-height: 32px;
+    line-height: torem(32);
     letter-spacing: -2%;
 }
 
 .subtitle {
     font-family: $style;
-    font-size: 16px;
+    font-size: torem(16);
     font-weight: $norm;
     text-align: $c_align;
-    line-height: 24px;
+    line-height: torem(24);
     letter-spacing: -1.9%;
 }
 
 .name_semibold {
     font-family: $style;
-    font-size: 16px;
+    font-size: torem(16);
     font-weight: $s-bold;
     text-align: $c_align;
-    line-height: 24px;
+    line-height: torem(24);
     letter-spacing: -1.9%;
 }
 
 .subtitle_semibold {
     @extend .black;
     font-family: $style;
-    font-size: 16px;
+    font-size: torem(16);
     font-weight: $s-bold;
     text-align: $c_align;
-    line-height: 24px;
+    line-height: torem(24);
     letter-spacing: -1.9%;
 }
 
 .price {
     @extend .black;
     font-family: $style;
-    font-size: 16px;
+    font-size: torem(16);
     font-weight: $s-bold;
-    line-height: 24px;
+    line-height: torem(24);
     letter-spacing: -1.9%;
 }
 
@@ -59,9 +67,9 @@ $norm : 400;
     @extend .decor_none;
     @extend .black;
     font-family: $style;
-    font-size: 12px;
+    font-size: torem(12);
     font-weight: $norm;
-    line-height: 18px;
+    line-height: torem(18);
     letter-spacing: -0.6%;
 }
 
@@ -69,53 +77,53 @@ $norm : 400;
     @extend .decor_none;
     @extend .black;
     font-family: $style;
-    font-size: 12px;
+    font-size: torem(12);
     font-weight: $s_bold;
-    line-height: 18px;
+    line-height: torem(18);
     letter-spacing: -0.6%;
 }
 
 .purchase_txt {
     font-family: $style;
-    font-size: 12px;
+    font-size: torem(12);
     font-weight: $s_bold;
-    line-height: 18px;
+    line-height: torem(18);
     letter-spacing: -0.6%;
 }
 
 .desc {
     @extend .black;
     font-family: $style;
-    font-size: 10px;
+    font-size: torem(10);
     font-weight: $norm; 
-    line-height: 16px;
+    line-height: torem(16);
     letter-spacing: 0%;
 }
 
 .others {
     font-family: $style;
-    font-size: 12px;
+    font-size: torem(12);
     font-weight: $norm;
-    line-height: 20px;
+    line-height: torem(20);
     letter-spacing: 0%;
 }
 
 .category {
     @extend .black;
     font-family: $style;
-    font-size: 10px;
+    font-size: torem(10);
     font-weight: $norm;
     text-align: $c_align;
-    line-height: 24px;
+    line-height: torem(24);
     letter-spacing: -0.6%;
 }
 
 .category_semibold {
     font-family: $style;
-    font-size: 10px;
+    font-size: torem(10);
     font-weight: $s_bold;
     text-align: $c_align;
-    line-height: 24px;
+    line-height: torem(24);
     letter-spacing: -0.6%;
 }
 
@@ -124,103 +132,103 @@ $norm : 400;
 @media only screen and (min-width : 768px) {
     .title {
         font-family: $style;
-        font-size: 24px;
+        font-size: torem(24);
         font-weight: $s_bold;
         text-align: $c_align;
-        line-height: 32px;
+        line-height: torem(32);
         letter-spacing: -2%;
     }
     
     .subtitle {
         font-family: $style;
-        font-size: 20px;
+        font-size: torem(20);
         font-weight: $norm;
         text-align: $c_align;
-        line-height: 28px;
+        line-height: torem(28);
         letter-spacing: -1.9%;
     }
     
     .name_semibold {
         font-family: $style;
-        font-size: 20px;
+        font-size: torem(20);
         font-weight: $s_bold;
         text-align: $c_align;
-        line-height: 28px;
+        line-height: torem(28);
         letter-spacing: -1.9%;
     }
 
     .subtitle_semibold {
         font-family: $style;
-        font-size: 20px;
+        font-size: torem(20);
         font-weight: $s_bold;
         text-align: $c_align;
-        line-height: 28px;
+        line-height: torem(28);
         letter-spacing: -1.9%;
     }
 
     .price {
         font-family: $style;
-        font-size: 20px;
+        font-size: torem(20);
         font-weight: $s_bold;
-        line-height: 28px;
+        line-height: torem(28);
         letter-spacing: -1.9%;
     }
     
     .text {
         font-family: $style;
-        font-size: 16px;
+        font-size: torem(16);
         font-weight: $norm;
-        line-height: 20px;
+        line-height: torem(20);
         letter-spacing: 0%;
     }
     
     .text_semibold {
         font-family: $style;
-        font-size: 16px;
+        font-size: torem(16);
         font-weight: $s_bold;
-        line-height: 20px;
+        line-height: torem(20);
         letter-spacing: 0%;
     }
 
     .purchase_txt {
         font-family: $style;
-        font-size: 16px;
+        font-size: torem(16);
         font-weight: $s_bold;
-        line-height: 20px;
+        line-height: torem(20);
         letter-spacing: 0%;
     }
     
     .desc {
         font-family: $style;
-        font-size: 12px;
+        font-size: torem(12);
         font-weight: $norm;
-        line-height: 18px;
+        line-height: torem(18);
         letter-spacing: 0%;
     }
     
     .others {
         font-family: $style;
-        font-size: 12px;
+        font-size: torem(12);
         font-weight: $norm;
-        line-height: 20px;
+        line-height: torem(20);
         letter-spacing: 0%;
     }
     
     .category {
         font-family: $style;
-        font-size: 12px;
+        font-size: torem(12);
         font-weight: $norm;
         text-align: $c_align;
-        line-height: 24px;
+        line-height: torem(24);
         letter-spacing: -0.6%;
     }
     
     .category_semibold {
         font-family: $style;
-        font-size: 12px;
+        font-size: torem(12);
         font-weight: $s_bold;
         text-align: $c_align;
-        line-height: 24px;
+        line-height: torem(24);
         letter-spacing: -0.6%;
     }
 }
@@ -230,85 +238,85 @@ $norm : 400;
 @media only screen and (min-width : 1440px){
     .title {
         font-family: $style;
-        font-size: 48px;
+        font-size: torem(48);
         font-weight: $s_bold;
         text-align: $c_align;
-        line-height: 60px;
+        line-height: torem(60);
         letter-spacing: -2%;
     }
     
     .subtitle {
         font-family: $style;
-        font-size: 24px;
+        font-size: torem(24);
         font-weight: $norm;
         text-align: $c_align;
-        line-height: 32px;
+        line-height: torem(32);
         letter-spacing: -1.9%;
     }
 
     .name_semibold {
         font-family: $style;
-        font-size: 24px;
+        font-size: torem(24);
         font-weight: $s_bold;
         text-align: $c_align;
-        line-height: 32px;
+        line-height: torem(32);
         letter-spacing: -1.9%;
     }
     
     .subtitle_semibold {
         font-family: $style;
-        font-size: 24px;
+        font-size: torem(24);
         font-weight: $s_bold;
         text-align: $c_align;
-        line-height: 32px;
+        line-height: torem(32);
         letter-spacing: -1.9%;
     }
 
     .price {
         font-family: $style;
-        font-size: 24px;
+        font-size: torem(24);
         font-weight: $s_bold;
-        line-height: 32px;
+        line-height: torem(32);
         letter-spacing: -1.9%;
     }
     
     .text {
         font-family: $style;
-        font-size: 18px;
+        font-size: torem(18);
         font-weight: $norm;
-        line-height: 24px;
+        line-height: torem(24);
         letter-spacing: -0.6%;
     }
     
     .text_semibold {
         font-family: $style;
-        font-size: 18px;
+        font-size: torem(18);
         font-weight: $s_bold;
-        line-height: 24px;
+        line-height: torem(24);
         letter-spacing: -0.6%;
     }
 
     .purchase_txt {
         font-family: $style;
-        font-size: 18px;
+        font-size: torem(18);
         font-weight: $s_bold;
-        line-height: 24px;
+        line-height: torem(24);
         letter-spacing: -0.6%;
     }
 
     .desc {
         font-family: $style;
-        font-size: 14px;
+        font-size: torem(14);
         font-weight: $norm;
-        line-height: 24px;
+        line-height: torem(24);
         letter-spacing: 0%;
     }
     
     .others {
         font-family: $style;
-        font-size: 14px;
+        font-size: torem(14);
         font-weight: $norm;
-        line-height: 22px;
+        line-height: torem(22);
         letter-spacing: 0%;
     }
 }
